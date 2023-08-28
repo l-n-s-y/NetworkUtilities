@@ -1,5 +1,7 @@
 # Convert decimal subnet mask to bit representation and vice versa.
 
+# (Use -d to specify conversion to decimals from bits)
+
 import sys
 
 try:

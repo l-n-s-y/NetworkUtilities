@@ -1,4 +1,6 @@
-# Convert dash notation mask to decimal notation (i.e /24 => 255.255.255.0)
+# Convert dash notation mask to decimal notation (i.e /24 => 11111111.11111111.11111111.00000000 => 255.255.255.0)
+
+# (Use -d to specify decimal output)
 
 import sys
 
