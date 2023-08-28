@@ -2,7 +2,7 @@
 
 # (Use -d to specify decimal output)
 
-import sys
+import sys, re
 
 mask_length = 32
 
@@ -14,6 +14,13 @@ except:
         print("Provide mask.")
         exit()
     to_decimal = False
+
+
+pattern = re.compile("[/][0-9]{1,2}")
+if not pattern.search(dash_mask):
+    print("Invalid dash mask format. i.e /24, /16, etc.")
+    exit()
+
 
 high_bits = int(dash_mask[1:])
 bit_mask = ""
